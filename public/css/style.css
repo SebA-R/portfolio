@@ -1,0 +1,80 @@
+:root {
+    --primary: #9DB2BF;
+    --secondary: #526D82;
+    --tertiary: #27374D;
+    --background-color: #DDE6ED;
+    --highlights: #ff8100;
+    --text-color: #ffffff;
+}
+
+body {
+    background-color: var(--background-color);
+    margin: 0;
+}
+
+div.main-wrapper {
+    min-height: 90.6vh;
+}
+
+menu  {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--secondary);
+    padding: 0.5rem;
+    margin: 0;
+}
+
+menu div.menu-box {
+    display: flex;
+    justify-content: right;
+    width: 80%;
+    align-items: center;
+    margin: 0 auto 0 0;
+    
+}
+
+div.menu-box a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s ease-in-out;
+    margin-left: 10%;
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 2;
+}
+  
+div.menu-box a::after {
+content: '';
+position: absolute;
+bottom: 50%;
+left: 50%;
+transform: translate(-50%, 1em);
+width: 100%;
+height: 0;
+padding: 0;
+background-color: var(--text-color);
+transition: height 0.1s ease-in-out 0.1s, padding 0.3s ease-in-out 0.1s;
+z-index: -1;
+border-radius: 5px;
+}
+  
+div.menu-box a:hover {
+color: var(--secondary);
+}
+
+div.menu-box a:hover::after {
+padding: 0.5rem;
+height: 100%;
+border-radius: 5px;
+}
+
+footer {
+    background-color: var(--secondary);
+    padding: 1.5rem;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    margin: auto 0 0 0;
+    position: relative;
+    bottom: 0;
+}
